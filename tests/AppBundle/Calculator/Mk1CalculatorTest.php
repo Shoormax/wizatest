@@ -14,17 +14,17 @@ class Mk1CalculatorTest extends TestCase
      */
     private $calculator;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->calculator = new Mk1Calculator();
     }
 
-    public function testGetSupportedModel()
+    public function testGetSupportedModel(): void
     {
         $this->assertEquals('mk1', $this->calculator->getSupportedModel());
     }
 
-    public function testGetChangeEasy()
+    public function testGetChangeEasy(): void
     {
         $change = $this->calculator->getChange(2);
         $this->assertInstanceOf(Change::class, $change);
